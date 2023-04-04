@@ -1,7 +1,7 @@
 <template>
   <div class="tab-bar">
-    <van-tabbar v-model="active" active-color="#ff9854">
-      <van-tabbar-item v-for="(item,index) in tabbarData" :key="item.id">
+    <van-tabbar v-model="active" active-color="#ff9854" route>
+      <van-tabbar-item v-for="(item,index) in tabbarData" :key="item.id" :to="item.path">
         <span>{{ item.text }}</span>
         <template #icon>
           <img
