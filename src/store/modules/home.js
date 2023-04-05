@@ -1,12 +1,17 @@
 import{ defineStore } from 'pinia'
+import {getHomeHotSuggests} from "@/services";
 
-const home=defineStore('home',{
+const useHomeStore=defineStore('home',{
     state:()=>({
-        cities: []
+      hotSuggests: [],
+      categories: []
     }),
     actions:{
-
+      async fetchHotSuggestData() {
+        const res = await getHomeHotSuggests()
+        this.hotSuggests = res.data
+      }
     }
 })
 
-export default home
+export default useHomeStore
