@@ -1,12 +1,14 @@
 <script setup>
-import tabBar from '@/components/tab-bar/tab-bar.vue';
+import TabBar from "@/components/tab-bar/tab-bar.vue";
+import Loading from "@/components/loading/loading.vue";
 </script>
 
 <template>
-  <main>
-    <router-view></router-view>
-    <tabBar/>
-  </main>
+    <main>
+        <router-view></router-view>
+        <tabBar/>
+        <Loading/>
+    </main>
 </template>
 
 <style scoped>

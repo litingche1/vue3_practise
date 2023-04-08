@@ -9,6 +9,7 @@ specifiers:
   normalize.css: ^8.0.1
   pinia: ^2.0.33
   postcss-import: ^15.1.0
+  underscore: ^1.13.6
   unplugin-vue-components: ^0.24.1
   vant: ^4.1.2
   vite: ^4.1.4
@@ -23,6 +24,7 @@ dependencies:
   normalize.css: 8.0.1
   pinia: 2.0.33_vue@3.2.47
   postcss-import: 15.1.0
+  underscore: 1.13.6
   vant: 4.1.2_vue@3.2.47
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
@@ -998,6 +1000,10 @@ packages:
 
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+
+  /underscore/1.13.6:
+    resolution: {integrity: sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==}
+    dev: false
 
   /unplugin-vue-components/0.24.1_vue@3.2.47:
     resolution: {integrity: sha512-T3A8HkZoIE1Cja95xNqolwza0yD5IVlgZZ1PVAGvVCx8xthmjsv38xWRCtHtwl+rvZyL9uif42SRkDGw9aCfMA==}

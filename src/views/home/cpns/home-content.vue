@@ -3,15 +3,15 @@
         <article><h2 class="title">热门精选</h2></article>
         <article class="list">
             <template v-for="item in houseList" :key="item.data.houseId">
-                <house-item-v9 v-if="item.discoveryContentType === 9" :item-data="item.data"/>
-                <house-item-v3 v-else-if="item.discoveryContentType === 3" :item-data="item.data"/>
+                <house-item-v9 v-if="item.discoveryContentType === 9" :item-data="item.data" @click="goDetail(item.data)"/>
+                <house-item-v3 v-else-if="item.discoveryContentType === 3" :item-data="item.data" @click="goDetail(item.data)"/>
             </template>
         </article>
     </section>
 </template>
 
 <script setup>
-import {watch} from 'vue'
+import {useRouter} from 'vue-router'
 import useHomeStore from '@/store/modules/home'
 import HouseItemV9 from "@/components/house-item-v9/house-item-v9.vue";
 import HouseItemV3 from "@/components/house-item-v3/house-item-v3.vue";
@@ -21,6 +21,11 @@ import useScroll from '@/hooks/useScroll'
 const homeStore = useHomeStore()
 const {houseList} = storeToRefs(homeStore)
 
+const router = useRouter()
+const goDetail = (item) => {
+    // 跳转到Detail页面
+    router.push("/detail/" + item.houseId)
+}
 </script>
 
 <style lang="less" scoped>

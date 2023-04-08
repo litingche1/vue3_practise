@@ -7,7 +7,8 @@ endDate.setDate(startDate.getDate() + 1)
 const userMainStore = defineStore('main', {
     state: () => ({
         startDate: startDate,
-        endDate: endDate
+        endDate: endDate,
+        isLoading:false
     }),
     action: {}
 })
