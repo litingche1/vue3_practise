@@ -1,4 +1,4 @@
-const tabbarData = [
+const tabBarData = [
   {
     text: "首页",
     image: "tabbar/tab_home.png",
@@ -25,4 +25,4 @@ const tabbarData = [
   }
 ]
 
-export default tabbarData
+export default tabBarData

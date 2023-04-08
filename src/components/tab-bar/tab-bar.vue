@@ -1,7 +1,7 @@
 <template>
   <div class="tab-bar">
     <van-tabbar v-model="active" active-color="#ff9854" route>
-      <van-tabbar-item v-for="(item,index) in tabbarData" :key="item.id" :to="item.path">
+      <van-tabbar-item v-for="(item,index) in tabBarData" :key="item.id" :to="item.path">
         <span>{{ item.text }}</span>
         <template #icon>
           <img
@@ -18,8 +18,8 @@
 
 <script setup>
 import { ref } from "vue";
-import {getAssetURL} from '../utils/load_assets'
-import tabbarData from "@/assets/data/tabbar";
+import {getAssetURL} from '../../utils/load_assets'
+import tabBarData from "@/assets/data/tabbar";
 const active = ref(0);
 </script>
 
