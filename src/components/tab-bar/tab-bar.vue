@@ -9,7 +9,7 @@
             :src="getAssetURL(item.image)"
             alt=""
           />
-          <img v-else :src="getAssetURL(item.imageActive)" alt="" />
+          <img v-else :src="getAssetURL(item.imageActive)" alt=""/>
         </template>
       </van-tabbar-item>
     </van-tabbar>
@@ -17,14 +17,22 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import {ref, watch} from "vue";
 import {getAssetURL} from '../../utils/load_assets'
 import tabBarData from "@/assets/data/tabbar";
+import {useRoute} from "vue-router";
+
+const router = useRoute()
 const active = ref(0);
+watch(router, newVal => {
+  let activeIdx = tabBarData.findIndex(item => item.path === newVal.path)
+  if (activeIdx === -1) return
+  active.value = activeIdx
+})
 </script>
 
 <style lang="less" scoped>
-  
+
 .tab-bar {
   // 局部定义一个变量: 只针对.tab-bar子元素才生效
   // --van-tabbar-item-icon-size: 30px !important;

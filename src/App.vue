@@ -4,16 +4,15 @@ import Loading from "@/components/loading/loading.vue";
 </script>
 
 <template>
-    <main>
-        <router-view v-slot="{ Component }">
-          <keep-alive include="home">
-            <component :is="Component" />
-          </keep-alive>
-
-        </router-view>
-        <tabBar/>
-        <Loading/>
-    </main>
+  <main>
+    <router-view v-slot="{ Component }">
+      <keep-alive include="home">
+        <component :is="Component"/>
+      </keep-alive>
+    </router-view>
+    <tabBar/>
+    <Loading/>
+  </main>
 </template>
 
 <style scoped>
